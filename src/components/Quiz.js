@@ -3,7 +3,21 @@ import Question from '../components/Question';
 import QuestionCount from '../components/QuestionCount';
 import AnswerOption from '../components/AnswerOption';
 
+
 function Quiz(props) {
+  function renderAnswerOptions(key) {
+    return (
+      <AnswerOption
+        key={key.content}
+        answerType={key.type}
+        answerContent={key.content}
+        answer={props.answer}
+        questionId={props.questionId}
+        onAnswerSelected={props.onAnswerSelected}
+      />
+    );
+  }
+
   return (
     <div className="quiz">
       <QuestionCount
@@ -27,18 +41,5 @@ Quiz.propTypes = {
   questionTotal: React.PropTypes.number.isRequired,
   onAnswerSelected: React.PropTypes.func.isRequired
 };
-
-function renderAnswerOptions(key) {
-  return (
-    <AnswerOption
-      key={key.content}
-      answerType={key.type}
-      answerContent={key.content}
-      answer={props.answer}
-      questionId={props.questionId}
-      onAnswerSelected={props.onAnswerSelected}
-    />
-  );
-}
 
 export default Quiz;
