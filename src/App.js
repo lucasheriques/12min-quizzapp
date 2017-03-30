@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
-import QuizApp from './components/QuizApp';
+import Home from './components/Home'
 import SpeedApp from './components/SpeedApp';
 
 class App extends Component {
@@ -45,8 +45,8 @@ class App extends Component {
             <h1>12min quiz - velocidade de leitura e nível de compreensão</h1>
           </div>
           <div className="App-body">
+            <Route exact path="/" component={Home} />
             <Route exact path="/read" component={SpeedApp} />
-            <Route exact path="/quiz" component={QuizApp} />
           </div>
         </div>
       </Router>

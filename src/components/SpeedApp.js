@@ -42,6 +42,7 @@ class SpeedApp extends Component {
       buttonText: 'Começar leitura',
       finished: 'no'
     });
+    clearInterval(this.timerID);
   }
 
   renderText() {
@@ -72,7 +73,7 @@ class SpeedApp extends Component {
       );
       this.setState({
         content: articles[this.state.id].content,
-        buttonText: 'Finalizar leitura',
+        buttonText: 'Finalizar leitura e seguir para o Quiz',
         finished: 'finishing'
       });
     }

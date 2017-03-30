@@ -20,6 +20,10 @@
     font-size: large;
 }
 
+.App-body {
+    margin-top: 32px;
+}
+
 #icon-logo .st0 {
     fill: #DADADA;
 }

@@ -3,7 +3,7 @@ import React from 'react';
 function TimerButton(props) {
   return (
     <div>
-      <button onClick={props.handleTimer}>{props.buttonText}</button>
+      {props.buttonText ? <button onClick={props.handleTimer}>{props.buttonText}</button> : null}
     </div>
   );
 }

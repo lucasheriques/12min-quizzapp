@@ -12,7 +12,6 @@ function Timer(props) {
       transitionName="fade"
       transitionEnterTimeout={800}
       transitionLeaveTimeout={500}
-      transitionAppear
       transitionAppearTimeout={500}
     >
       <div>

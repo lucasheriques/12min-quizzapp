@@ -97,14 +97,18 @@ class QuizApp extends Component {
 
   renderQuiz() {
     return (
-      <Quiz
-        answer={this.state.answer}
-        answerOptions={this.state.answerOptions}
-        questionId={this.state.questionId}
-        question={this.state.question}
-        questionTotal={quizQuestions.length}
-        onAnswerSelected={this.handleAnswerSelected}
-      />
+      <div>
+        <p class="intro">O propósito desse desse quiz é medir a <span className="green">compreensão que você teve do texto
+    </span>, e então compará-la com a sua <span className="purple">velocidade de leitura</span>.</p>
+        <Quiz
+          answer={this.state.answer}
+          answerOptions={this.state.answerOptions}
+          questionId={this.state.questionId}
+          question={this.state.question}
+          questionTotal={quizQuestions.length}
+          onAnswerSelected={this.handleAnswerSelected}
+        />
+      </div>
     );
   }
 
