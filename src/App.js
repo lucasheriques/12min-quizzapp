@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 import QuizApp from './components/QuizApp';
-import Article from './components/Article';
+import SpeedApp from './components/SpeedApp';
 
 class App extends Component {
   render() {
@@ -16,11 +16,10 @@ class App extends Component {
           </div>
 
 
-
-          <Link to="/">Artigo</Link>
+          <Link to="/read">Artigo</Link>
           <Link to="/quiz">Quiz</Link>
 
-          <Route exact path="/" component={Article} />
+          <Route exact path="/read" component={SpeedApp} />
           <Route exact path="/quiz" component={QuizApp} />
         </div>
       </Router>
