@@ -11,15 +11,15 @@ var quizQuestions = [
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada4"
       }
     ]
@@ -32,19 +32,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -57,19 +57,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -82,19 +82,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -107,19 +107,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -132,19 +132,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -157,19 +157,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -182,19 +182,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -207,19 +207,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
@@ -232,19 +232,19 @@ var quizQuestions = [
         content: "Resposta correta"
       },
       {
-        type: "false",
+        type: "false1",
         content: "Resposta errada1"
       },
       {
-        type: "false",
+        type: "false2",
         content: "Resposta errada2"
       },
       {
-        type: "false",
+        type: "false3",
         content: "Resposta errada3"
       },
       {
-        type: "false",
+        type: "false4",
         content: "Resposta errada4"
       }
     ]
