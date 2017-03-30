@@ -63,7 +63,7 @@ class SpeedApp extends Component {
       this.setState({
         content: '',
         finished: 'yes',
-        speed: (this.state.word_count / this.state.totalTime * 60).toString()
+        speed: this.state.word_count / this.state.totalTime * 60
       })
       ;
     } else {

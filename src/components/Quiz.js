@@ -12,7 +12,7 @@ function Quiz(props) {
         key={key.content}
         answerType={key.type}
         answerContent={key.content}
-        answer={props.answer}
+        userAnswer={props.answer}
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}
       />

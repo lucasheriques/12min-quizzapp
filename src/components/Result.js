@@ -11,7 +11,7 @@ function Result(props) {
       </p>
 
       <p>No seu caso, você leu <span className="purple">{props.wordCount} palavras em {props.timeElapsed}</span>, lhe
-        dando uma velocidade de <span className="purple">{props.speedResult} palavras por minuto!</span></p>
+        dando uma velocidade de <span className="purple">{Math.floor(props.speedResult)} palavras por minuto!</span></p>
 
       <p>Já o seu <span className="green">nível de compreensão</span> é medido pela porcentagem de perguntas que você
         acertou no Quiz. Ou seja, se ele possui dez perguntas, cada acerto equivale a 10%!</p>

@@ -98,7 +98,7 @@ class QuizApp extends Component {
   renderQuiz() {
     return (
       <div>
-        <p class="intro">O propósito desse desse quiz é medir a <span className="green">compreensão que você teve do texto
+        <p className="intro">O propósito desse desse quiz é medir a <span className="green">compreensão que você teve do texto
     </span>, e então compará-la com a sua <span className="purple">velocidade de leitura</span>.</p>
         <Quiz
           answer={this.state.answer}
