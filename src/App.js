@@ -17,9 +17,8 @@ class App extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {
-        nintendo: 0,
-        microsoft: 0,
-        sony: 0
+        true: 0,
+        false: 0
       },
       result: ''
     };
@@ -131,7 +130,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>12min quiz</h2>
         </div>
-        {this.state.reresult ? this.renderResult() : this.renderQuiz()}
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );
   }
