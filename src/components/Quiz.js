@@ -50,7 +50,8 @@ Quiz.propTypes = {
   question: React.PropTypes.string.isRequired,
   questionId: React.PropTypes.number.isRequired,
   questionTotal: React.PropTypes.number.isRequired,
-  onAnswerSelected: React.PropTypes.func.isRequired
+  onAnswerSelected: React.PropTypes.func.isRequired,
+  speed: React.PropTypes.number.isRequired
 };
 
 export default Quiz;

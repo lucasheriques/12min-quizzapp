@@ -1,26 +1,53 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import QuizApp from './components/QuizApp';
 import SpeedApp from './components/SpeedApp';
 
 class App extends Component {
+  svgLogo(props) {
+    return (
+      <svg className="logo-header" id="icon-logo" style={{"enableBackground": "new 0 0 210 95"}} width="128px"
+           version="1.1" viewBox="0 0 210 95" x="0px" y="0px" xmlSpace="preserve">
+        <path className="st0"
+              d="M42.9-123.2c-20.1,0-36.4,16.3-36.4,36.4s16.3,36.4,36.4,36.4s36.4-16.3,36.4-36.4S63-123.2,42.9-123.2z M60-63.3c-10.4,7.5-23.7,7.5-34.1,0c-10.4-7.5-14.5-20.3-10.5-32.4c4-12.2,14.8-20.1,27.6-20.1v29l27.6-9 C74.5-83.6,70.4-70.9,60-63.3z" />
+        <path className="st1" d="M42.9-86.8v-43.6c19.3,0,35.5,11.8,41.5,30.2L42.9-86.8z" />
+        <path className="st0"
+              d="M42.9,14.7C22.8,14.7,6.5,31,6.5,51.1s16.3,36.4,36.4,36.4s36.4-16.3,36.4-36.4S63,14.7,42.9,14.7z M60,74.6 c-10.4,7.5-23.7,7.5-34.1,0C15.5,67,11.4,54.3,15.3,42.1c4-12.2,14.8-20.1,27.6-20.1v29l27.6-9C74.5,54.3,70.4,67,60,74.6z" />
+        <path className="st1" d="M42.9,51.1V7.4c19.3,0,35.5,11.8,41.5,30.2L42.9,51.1z" />
+        <g>
+          <path className="st1" d="M91.3-75.6h6v-17.9l-5.7,1.7v-8.3l15.7-5.7v30.2h5.6v8H91.3V-75.6z" />
+          <path className="st1"
+                d="M115.2-67.6v-8.6c0-2.8,0.5-5.1,1.4-7c0.9-1.8,2.1-3.3,3.6-4.3c1.5-1.1,3.2-1.8,5.1-2.3 c1.9-0.4,3.9-0.7,5.8-0.8c0.6,0,1.2,0,1.8-0.1c0.7-0.1,1.3-0.2,1.8-0.4c0.5-0.2,1-0.5,1.3-0.9c0.4-0.4,0.5-0.9,0.5-1.7 c0-1.3-0.5-2.3-1.6-2.8c-1-0.6-2.2-0.8-3.5-0.8c-1.4,0-2.6,0.3-3.6,0.9c-1.1,0.6-1.7,1.6-1.8,3.2h-10.3c0-2.2,0.4-4.1,1.3-5.6 c0.9-1.6,2-2.9,3.5-3.9c1.4-1,3.1-1.7,5-2.2c1.9-0.5,3.9-0.7,6-0.7c1.9,0,3.8,0.2,5.6,0.6c1.9,0.4,3.5,1.1,5,2.1 c1.5,0.9,2.7,2.2,3.6,3.7c0.9,1.5,1.4,3.4,1.4,5.5c0,2.4-0.4,4.4-1.3,5.9c-0.9,1.5-2.1,2.7-3.6,3.5c-1.5,0.8-3.2,1.4-5.1,1.7 c-1.9,0.3-3.9,0.4-6,0.5c-0.6,0-1.3,0.1-2,0.3c-0.7,0.2-1.3,0.5-1.9,0.9c-0.6,0.4-1.1,1-1.4,1.7c-0.4,0.7-0.6,1.6-0.6,2.7h12.3 l0.3-4.4h9.3v13.3H115.2z" />
+          <path className="st1" d="M159.9-105.2v15.1h-7.7v-15.1H159.9z" />
+        </g>
+        <g>
+          <g>
+            <path className="st1" d="M92,62.4h6V44.7l-5.6,1.7v-8.3l15.5-5.6v30h5.5v7.9H92V62.4z" />
+            <path className="st1"
+                  d="M116.1,70.3l-0.2-8.2c-0.1-2.8,0.4-5.1,1.2-6.9c0.9-1.8,2.1-3.3,3.5-4.4c1.5-1.1,3.1-1.9,5-2.3c1.9-0.5,3.8-0.8,5.8-0.9c0.6,0,1.2-0.1,1.8-0.1c0.7-0.1,1.2-0.2,1.8-0.4c0.5-0.2,1-0.5,1.3-0.9c0.3-0.4,0.5-1,0.5-1.7c0-1.3-0.6-2.2-1.6-2.8c-1-0.5-2.2-0.8-3.5-0.8c-1.3,0-2.5,0.3-3.6,0.9c-1.1,0.6-1.6,1.9-1.7,3.4h-10.2c0-2.2,0.3-4,1.2-5.6s1.9-2.9,3.4-3.9c1.4-1,3.1-1.8,4.9-2.3c1.9-0.5,3.9-0.8,5.9-0.8c1.9,0,3.7,0.1,5.6,0.5c1.9,0.4,3.5,1,5,1.9c1.5,0.9,2.7,2.1,3.7,3.6c1,1.5,1.5,3.3,1.5,5.4c0,2.4-0.4,4.4-1.2,5.9c-0.9,1.5-2,2.7-3.5,3.5c-1.5,0.8-3.2,1.4-5.1,1.8c-1.9,0.3-3.9,0.5-6,0.6c-0.6,0-1.3,0.2-2,0.4c-0.7,0.2-1.3,0.5-1.9,0.9c-0.6,0.4-1,1-1.4,1.7c-0.4,0.7-0.5,1.4-0.5,2.4h12.2l0.2-4.4l9.3-0.2l0.3,13.6H116.1z" />
+          </g>
+          <path className="st1"
+                d="M168.8,55.8l-6.5,9h-0.7l-6.4-9v14.6h-3v-19c1.2,0,2.3,0,3.5,0l6.3,8.9l6.2-8.9h3.5v19h-3V55.8z" />
+          <path className="st1" d="M176.6,70.3v-19h3v19H176.6z" />
+          <path className="st1" d="M197.4,64.8V51.3h3v19h-2.3l-10.8-13.4v13.4h-3.1v-19h2.3L197.4,64.8z" />
+        </g>
+      </svg>
+    );
+  }
+
   render() {
     return (
       <Router>
         <div className="App">
           <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>12min quiz - velocidade de leitura e nível de compreensão</h2>
+            {this.svgLogo()}
+            <h1>12min quiz - velocidade de leitura e nível de compreensão</h1>
           </div>
-
-
-          <Link to="/read">Artigo</Link>
-          <Link to="/quiz">Quiz</Link>
-
-          <Route exact path="/read" component={SpeedApp} />
-          <Route exact path="/quiz" component={QuizApp} />
+          <div className="App-body">
+            <Route exact path="/read" component={SpeedApp} />
+            <Route exact path="/quiz" component={QuizApp} />
+          </div>
         </div>
       </Router>
     );

@@ -1,53 +1,41 @@
-import React, {Component} from 'react';
+import React from 'react';
+import Article from './Article';
+import Title from './Title';
+import TimerButton from './TimerButton';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-class Timer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      totalSeconds: 0
-    }
-  }
-
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      totalSeconds: this.state.totalSeconds + 1
-    })
-  }
-
-  formatSeconds(totalSeconds) {
-    let seconds = totalSeconds % 60;
-    let minutes = Math.floor(totalSeconds / 60);
-
-    if (seconds < 10) {
-      seconds = '0' + seconds;
-    }
-
-    if (minutes < 10) {
-      minutes = '0' + minutes;
-    }
-
-    return minutes + ':' + seconds;
-  }
-
-  render() {
-    return (
+function Timer(props) {
+  return (
+    <ReactCSSTransitionGroup
+      className=""
+      component="div"
+      transitionName="fade"
+      transitionEnterTimeout={800}
+      transitionLeaveTimeout={500}
+      transitionAppear
+      transitionAppearTimeout={500}
+    >
       <div>
-        {this.formatSeconds(this.state.totalSeconds)}
+        <section>
+          <Title title={props.title} />
+          <span className="timer">{props.totalTime}</span>
+          <Article content={props.content} />
+          <TimerButton
+            buttonText={props.buttonText}
+            handleTimer={props.handleTimer}
+          />
+        </section>
       </div>
-    );
-  }
+    </ReactCSSTransitionGroup>
+  );
 }
+
+Timer.propTypes = {
+  totalTime: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string.isRequired,
+  content: React.PropTypes.string.isRequired,
+  buttonText: React.PropTypes.string.isRequired,
+  handleTimer: React.PropTypes.func.isRequired
+};
 
 export default Timer;

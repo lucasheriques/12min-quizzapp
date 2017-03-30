@@ -1,14 +1,41 @@
 /* Shared */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    font-family: 'Source Code Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #fafafa;
     margin: 0;
-    padding: 0;
-    background: #eee;
-    font-family: sans-serif;
+    padding-bottom: 32px;
+}
+
+h1 {
+    color: #575756;
+    font-weight: 300;
+}
+
+h2 {
+    color: #575756;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin: 0 0 32px;
+}
+
+.content {
+    max-width: 700px;
+    margin: 32px auto;
+    text-align: justify;
+    line-height: 1.58;
+    font-size: 21px;
+    font-family: 'Lato';
 }
 
 .container {
@@ -56,6 +83,50 @@ body {
 
 .answerOption:hover {
     background-color: #eefbfe;
+}
+
+.timer {
+    font-family: 'Lato';
+    font-size: 18px;
+    color: #6F1BB1;
+}
+
+select {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 32px 0;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    height: 3rem;
+}
+
+button {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    color: #fff;
+    background-color: #6F1BB1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: .3s ease-out;
+}
+
+button:hover {
+    opacity: 0.9;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+button.purple {
+    background-color: #6F1BB1;
 }
 
 .radioCustomButton {

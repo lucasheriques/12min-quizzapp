@@ -88,7 +88,6 @@ class QuizApp extends Component {
   getResults() {
     const answersCount = this.state.answersCount;
 
-    console.log(answersCount["true"] / quizQuestions.length);
     return Math.round(answersCount["true"] / quizQuestions.length * 100).toString();
   }
 
@@ -111,7 +110,10 @@ class QuizApp extends Component {
 
   renderResult() {
     return (
-      <Result quizResult={this.state.result} />
+      <Result
+        quizResult={this.state.result}
+        speedResult={this.props.speed}
+      />
     );
   }
 
