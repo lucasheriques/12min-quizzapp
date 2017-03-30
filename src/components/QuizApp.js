@@ -115,8 +115,12 @@ class QuizApp extends Component {
   renderResult() {
     return (
       <Result
-        quizResult={this.state.result}
         speedResult={this.props.speed}
+        timeElapsed={this.props.timeElapsed}
+        wordCount={this.props.wordCount}
+        quizResult={this.state.result}
+        answersTotal={quizQuestions.length}
+        rightAnswers={this.state.answersCount["true"]}
       />
     );
   }

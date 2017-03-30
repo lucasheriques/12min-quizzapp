@@ -117,7 +117,11 @@ class SpeedApp extends Component {
           {this.createSelectItems()}
         </select>
 
-        {this.state.finished === "yes" ? <QuizApp speed={this.state.speed} /> : this.renderText() }
+        {this.state.finished === "yes" ? <QuizApp
+            speed={this.state.speed}
+            timeElapsed={this.formatSeconds(this.state.totalTime)}
+            wordCount={this.state.word_count}
+          /> : this.renderText() }
       </div>
     );
   }
